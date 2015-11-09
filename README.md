@@ -3,6 +3,8 @@ GridView in iOS
 
 
 how to use:
+
+
 LHGridView *gridView = [[LHGridView alloc] init];
     gridView.frame = CGRectMake(0, 20, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height-20);
     gridView.columnNum = 7;
