@@ -1,0 +1,314 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AF731F121BEF351700D29794 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF731F111BEF351700D29794 /* main.m */; };
+		AF731F151BEF351700D29794 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF731F141BEF351700D29794 /* AppDelegate.m */; };
+		AF731F181BEF351700D29794 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF731F171BEF351700D29794 /* ViewController.m */; };
+		AF731F1D1BEF351700D29794 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF731F1C1BEF351700D29794 /* Assets.xcassets */; };
+		AF731F201BEF351700D29794 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF731F1E1BEF351700D29794 /* LaunchScreen.storyboard */; };
+		AF731F2A1BEF360D00D29794 /* LHGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF731F291BEF360D00D29794 /* LHGridView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AF731F0D1BEF351700D29794 /* LHGridViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LHGridViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF731F111BEF351700D29794 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AF731F131BEF351700D29794 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AF731F141BEF351700D29794 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AF731F161BEF351700D29794 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AF731F171BEF351700D29794 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AF731F1C1BEF351700D29794 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF731F1F1BEF351700D29794 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AF731F211BEF351700D29794 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF731F281BEF360D00D29794 /* LHGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHGridView.h; sourceTree = "<group>"; };
+		AF731F291BEF360D00D29794 /* LHGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHGridView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF731F0A1BEF351700D29794 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF731F041BEF351700D29794 = {
+			isa = PBXGroup;
+			children = (
+				AF731F0F1BEF351700D29794 /* LHGridViewDemo */,
+				AF731F0E1BEF351700D29794 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AF731F0E1BEF351700D29794 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF731F0D1BEF351700D29794 /* LHGridViewDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF731F0F1BEF351700D29794 /* LHGridViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				AF731F271BEF35E900D29794 /* LHGridView */,
+				AF731F131BEF351700D29794 /* AppDelegate.h */,
+				AF731F141BEF351700D29794 /* AppDelegate.m */,
+				AF731F161BEF351700D29794 /* ViewController.h */,
+				AF731F171BEF351700D29794 /* ViewController.m */,
+				AF731F1C1BEF351700D29794 /* Assets.xcassets */,
+				AF731F1E1BEF351700D29794 /* LaunchScreen.storyboard */,
+				AF731F211BEF351700D29794 /* Info.plist */,
+				AF731F101BEF351700D29794 /* Supporting Files */,
+			);
+			path = LHGridViewDemo;
+			sourceTree = "<group>";
+		};
+		AF731F101BEF351700D29794 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF731F111BEF351700D29794 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AF731F271BEF35E900D29794 /* LHGridView */ = {
+			isa = PBXGroup;
+			children = (
+				AF731F281BEF360D00D29794 /* LHGridView.h */,
+				AF731F291BEF360D00D29794 /* LHGridView.m */,
+			);
+			path = LHGridView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF731F0C1BEF351700D29794 /* LHGridViewDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF731F241BEF351700D29794 /* Build configuration list for PBXNativeTarget "LHGridViewDemo" */;
+			buildPhases = (
+				AF731F091BEF351700D29794 /* Sources */,
+				AF731F0A1BEF351700D29794 /* Frameworks */,
+				AF731F0B1BEF351700D29794 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LHGridViewDemo;
+			productName = LHGridViewDemo;
+			productReference = AF731F0D1BEF351700D29794 /* LHGridViewDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF731F051BEF351700D29794 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = com.dnetzj.com;
+				TargetAttributes = {
+					AF731F0C1BEF351700D29794 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = AF731F081BEF351700D29794 /* Build configuration list for PBXProject "LHGridViewDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AF731F041BEF351700D29794;
+			productRefGroup = AF731F0E1BEF351700D29794 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF731F0C1BEF351700D29794 /* LHGridViewDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF731F0B1BEF351700D29794 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF731F201BEF351700D29794 /* LaunchScreen.storyboard in Resources */,
+				AF731F1D1BEF351700D29794 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF731F091BEF351700D29794 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF731F2A1BEF360D00D29794 /* LHGridView.m in Sources */,
+				AF731F181BEF351700D29794 /* ViewController.m in Sources */,
+				AF731F151BEF351700D29794 /* AppDelegate.m in Sources */,
+				AF731F121BEF351700D29794 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AF731F1E1BEF351700D29794 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF731F1F1BEF351700D29794 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AF731F221BEF351700D29794 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AF731F231BEF351700D29794 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AF731F251BEF351700D29794 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = LHGridViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dnetzj.gridview.LHGridViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		AF731F261BEF351700D29794 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = LHGridViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dnetzj.gridview.LHGridViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF731F081BEF351700D29794 /* Build configuration list for PBXProject "LHGridViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF731F221BEF351700D29794 /* Debug */,
+				AF731F231BEF351700D29794 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF731F241BEF351700D29794 /* Build configuration list for PBXNativeTarget "LHGridViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF731F251BEF351700D29794 /* Debug */,
+				AF731F261BEF351700D29794 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AF731F051BEF351700D29794 /* Project object */;
+}
