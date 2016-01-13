@@ -325,6 +325,16 @@
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
+//    [self performSelectorOnMainThread:@selector(setTitleRightBounds:) withObject:scrollView waitUntilDone:YES modes:@[NSRunLoopCommonModes]];
+    self.titleRightView.bounds = CGRectMake(scrollView.contentOffset.x,
+                                            0,
+                                            self.titleRightView.frame.size.width,
+                                            self.titleRightView.frame.size.height);
+    [self bringSubviewToFront:self.titleLeftView];
+}
+
+-(void)setTitleRightBounds:(UIScrollView *)scrollView
+{
     self.titleRightView.bounds = CGRectMake(scrollView.contentOffset.x,
                                             0,
                                             self.titleRightView.frame.size.width,
