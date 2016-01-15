@@ -7,6 +7,7 @@
 //
 
 #import "LHGridView.h"
+#define ksepLineWidth 0.2
 
 @interface LHGridView ()<UIScrollViewDelegate>
 {
@@ -32,15 +33,15 @@
         self.bodyScrollView = [[UIScrollView alloc]init];
         
         self.bodyLeftView = [[UIView alloc] init];
-        self.bodyLeftView.layer.borderColor = [UIColor grayColor].CGColor;
-        self.bodyLeftView.layer.borderWidth = 0.5;
+//        self.bodyLeftView.layer.borderColor = [UIColor grayColor].CGColor;
+//        self.bodyLeftView.layer.borderWidth = 0.5;
         
         self.bodyRightScrollView = [[UIScrollView alloc] init];
         self.bodyRightScrollView.delegate = self;
         
         self.bodyRightScrollViewSubview = [[UIView alloc] init];
-        self.bodyRightScrollViewSubview.layer.borderColor = [UIColor grayColor].CGColor;
-        self.bodyRightScrollViewSubview.layer.borderWidth = 0.5;
+//        self.bodyRightScrollViewSubview.layer.borderColor = [UIColor grayColor].CGColor;
+//        self.bodyRightScrollViewSubview.layer.borderWidth = 0.5;
         
         [self.bodyRightScrollView addSubview:self.bodyRightScrollViewSubview];
         [self.bodyScrollView addSubview:self.bodyLeftView];
@@ -50,10 +51,10 @@
         [self addSubview:self.titleRightView];
         [self addSubview:self.bodyScrollView];
         
-        _titleBgColor = [UIColor blackColor];
-        _bodyLeftEvenBgColor = [UIColor redColor];
+        _titleBgColor = [UIColor orangeColor];
+        _bodyLeftEvenBgColor = [UIColor lightGrayColor];
         _bodyLeftUnEvenBgColor = [UIColor whiteColor];
-        _bodyRigtEvenBgColor = [UIColor blueColor];
+        _bodyRigtEvenBgColor = [UIColor lightGrayColor];
         _bodyRightUnEvenBgColor = [UIColor whiteColor];
         
         _titleFont = [UIFont systemFontOfSize:14];
@@ -79,11 +80,13 @@
     NSInteger fixWidth = [self getFixColumnWidth];
     
     _titleLeftView.frame = CGRectMake(0, 0, fixWidth, _rowHeight*_fixRow);
+    _titleLeftView.backgroundColor = _sepTitleLineColor;
     
     _titleRightView.frame = CGRectMake(_titleLeftView.frame.size.width,
                                              0,
                                              allWidth - _titleLeftView.frame.size.width,
-                                             _titleLeftView.frame.size.height);
+                                       _titleLeftView.frame.size.height);
+    _titleRightView.backgroundColor = _sepTitleLineColor;
     
     _bodyScrollView.frame = CGRectMake(0,
                                                _titleLeftView.frame.size.height,
@@ -95,13 +98,15 @@
     _bodyLeftView.frame = CGRectMake(0,
                                              0,
                                              _titleLeftView.frame.size.width,
-                                             (_dataSource.count - _fixRow)*_rowHeight);
+                                     (_dataSource.count - _fixRow)*_rowHeight);
+    _bodyLeftView.backgroundColor = _sepBodyLineColor;
     
     _bodyRightScrollView.frame = CGRectMake(_bodyLeftView.frame.size.width,
                                                     0,
                                                     self.frame.size.width - _bodyLeftView.frame.size.width,
                                                     self.frame.size.height - _titleRightView.frame.size.height);//该frame的高和contentSize还需在呈现数据的时候动态计算
     _bodyRightScrollViewSubview.frame = CGRectMake(0, 0, allWidth - _bodyLeftView.frame.size.width, _bodyLeftView.frame.size.height);
+    _bodyRightScrollViewSubview.backgroundColor = _sepBodyLineColor;
     
     [self refreshDataAndView];
 }
@@ -183,15 +188,10 @@
             lab.text = [titleArray objectAtIndex:column];
             lab.font = _titleFont;
             lab.textColor = _titleFontColor;
-            if(_isTitleSepLine)
-            {
-                lab.layer.borderColor = _sepTitleLineColor.CGColor;
-                lab.layer.borderWidth = 0.3;
-            }
             
             //leftview
             if (column < _fixCol) {
-            lab.frame = CGRectMake(columnOffsetLeft, columnOffsetY, columnWidth, _rowHeight);
+            lab.frame = CGRectMake(columnOffsetLeft, columnOffsetY, columnWidth-ksepLineWidth, _rowHeight-ksepLineWidth);
                 [_titleLeftView addSubview:lab];
                 columnOffsetLeft += [[_columnsWidthArr objectAtIndex:column] integerValue];
             }
@@ -229,7 +229,7 @@
                 //判断是否被合并
                 if([self isMergeCell:column andRow:fixrow]){width = 0;}
                 
-                lab.frame = CGRectMake(columnOffsetRight, columnOffsetY, width, _rowHeight);
+                lab.frame = CGRectMake(columnOffsetRight, columnOffsetY, (width-ksepLineWidth)>=0?(width-ksepLineWidth):0, _rowHeight-ksepLineWidth);
                 
                 [_titleRightView addSubview:lab];
                 columnOffsetRight += [[_columnsWidthArr objectAtIndex:column] integerValue];
@@ -265,16 +265,10 @@
             lab.textAlignment = NSTextAlignmentCenter;
             [lab setText:[NSString stringWithFormat:@"%@",[rowData objectAtIndex:column]]];
             lab.font = _bodyFont;
-            lab.textColor = _bodyFontColor;
-            if(_isBodySepLine)
-            {
-                lab.layer.borderColor = _sepBodyLineColor.CGColor;
-                lab.layer.borderWidth = 0.3;
-            }
             
             if (column < _fixCol)
             {
-                lab.frame = CGRectMake(columnOffsetLeft, columnOffsetY, columnWidth, _rowHeight);
+                lab.frame = CGRectMake(columnOffsetLeft, columnOffsetY, columnWidth-ksepLineWidth, _rowHeight-ksepLineWidth);
                 //                NSLog(@"left:%ld,%@",(long)row,lab);
                 if (row%2 == 0) {
                     lab.backgroundColor = _bodyLeftEvenBgColor;
@@ -289,7 +283,7 @@
             }
             else
             {
-                lab.frame = CGRectMake(columnOffsetRight, columnOffsetY, columnWidth, _rowHeight);
+                lab.frame = CGRectMake(columnOffsetRight, columnOffsetY, columnWidth-ksepLineWidth, _rowHeight-ksepLineWidth);
                 //                NSLog(@"right:%ld,%@",(long)row,lab);
                 [_bodyRightScrollViewSubview addSubview:lab];
                 if (row%2 == 0) {
@@ -325,21 +319,13 @@
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-//    [self performSelectorOnMainThread:@selector(setTitleRightBounds:) withObject:scrollView waitUntilDone:YES modes:@[NSRunLoopCommonModes]];
-    self.titleRightView.bounds = CGRectMake(scrollView.contentOffset.x,
+    
+    self.titleRightView.frame = CGRectMake((scrollView.contentOffset.x - self.titleLeftView.frame.size.width)*-1,
                                             0,
                                             self.titleRightView.frame.size.width,
                                             self.titleRightView.frame.size.height);
     [self bringSubviewToFront:self.titleLeftView];
 }
 
--(void)setTitleRightBounds:(UIScrollView *)scrollView
-{
-    self.titleRightView.bounds = CGRectMake(scrollView.contentOffset.x,
-                                            0,
-                                            self.titleRightView.frame.size.width,
-                                            self.titleRightView.frame.size.height);
-    [self bringSubviewToFront:self.titleLeftView];
-}
 
 @end

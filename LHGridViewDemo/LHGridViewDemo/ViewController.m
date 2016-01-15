@@ -24,10 +24,8 @@
     gridView.fixCol = 1;
     gridView.fixRow = 2;
     gridView.rowHeight = 60;
-    gridView.isTitleSepLine = YES;
-    gridView.sepTitleLineColor = [UIColor whiteColor];
-    gridView.isBodySepLine = YES;
-    gridView.sepBodyLineColor = [UIColor orangeColor];
+//    gridView.sepTitleLineColor = [UIColor blackColor];
+//    gridView.sepBodyLineColor = [UIColor blackColor];
     
     gridView.dataSource = @[
                             @[@"title0_0",@"title0_1",@"title0_2",@"title0_3",@"",@"",@"title0_6"],

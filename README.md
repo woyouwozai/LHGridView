@@ -11,10 +11,6 @@ GridView in iOS
 
 @property(nonatomic,assign)NSInteger rowHeight;//行高
 
-@property(nonatomic,assign)BOOL isTitleSepLine;//是否显示分割线
-
-@property(nonatomic,assign)BOOL isBodySepLine;
-
 @property(nonatomic,strong)UIColor *sepTitleLineColor;//分割线颜色
 
 @property(nonatomic,strong)UIColor *sepBodyLineColor;//分割线颜色
@@ -58,14 +54,6 @@ gridView.fixCol = 1;
 gridView.fixRow = 2;
 
 gridView.rowHeight = 60;
-
-gridView.isTitleSepLine = YES;
-
-gridView.sepTitleLineColor = [UIColor whiteColor];
-
-gridView.isBodySepLine = YES;
-
-gridView.sepBodyLineColor = [UIColor orangeColor];
     
 gridView.dataSource = @[
                             @[@"title0_0",@"title0_1",@"title0_2",@"title0_3",@"",@"",@"title0_6"],

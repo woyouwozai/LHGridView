@@ -25,8 +25,6 @@
 @property(nonatomic,assign)NSInteger fixCol;//固定列数
 @property(nonatomic,assign)NSInteger rowHeight;//行高
 
-@property(nonatomic,assign)BOOL isTitleSepLine;//是否显示分割线
-@property(nonatomic,assign)BOOL isBodySepLine;
 @property(nonatomic,strong)UIColor *sepTitleLineColor;//分割线颜色
 @property(nonatomic,strong)UIColor *sepBodyLineColor;//分割线颜色
 

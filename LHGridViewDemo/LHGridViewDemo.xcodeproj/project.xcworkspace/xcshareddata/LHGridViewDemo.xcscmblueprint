@@ -1,0 +1,32 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "2A1E44BC7AB50A0F0B1879D63CAFB73BAE4D6C03",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "a445b8a2-f16d-2444-9595-b4d474f02ca6" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "2A1E44BC7AB50A0F0B1879D63CAFB73BAE4D6C03" : 0,
+    "a445b8a2-f16d-2444-9595-b4d474f02ca6" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "65E8F6B3-305F-4415-91F2-C71FAEFC2ED3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "2A1E44BC7AB50A0F0B1879D63CAFB73BAE4D6C03" : "LHGridView\/",
+    "a445b8a2-f16d-2444-9595-b4d474f02ca6" : "..\/.."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "LHGridViewDemo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "LHGridViewDemo\/LHGridViewDemo.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:woyouwozai\/LHGridView.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2A1E44BC7AB50A0F0B1879D63CAFB73BAE4D6C03"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/www.dnetzj.com\/svn\/jiaxiao",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "a445b8a2-f16d-2444-9595-b4d474f02ca6"
+    }
+  ]
+}
